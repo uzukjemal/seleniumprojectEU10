@@ -14,7 +14,7 @@ public class T4_findElements {
 
 
         //TC #4: FindElements Task
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
 
