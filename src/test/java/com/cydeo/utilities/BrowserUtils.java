@@ -37,7 +37,7 @@ public class BrowserUtils {
     Arg3: expectedInTitle to be compared against actualTitle
      */
 
-    public static void switchWindowAndVerify(WebDriver driver, String expectedInUrl, String expectedTitle) {
+    public static void switchWindowAndVerify(WebDriver driver, String expectedInUrl, String expectedInTitle) {
 
         Set<String> allWindowsHandles = driver.getWindowHandles();
 
@@ -52,7 +52,7 @@ public class BrowserUtils {
 
         //5. Assert: Title contains “Etsy”
         String actualTitle = driver.getTitle();
-        Assert.assertTrue(actualTitle.contains(expectedTitle));
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 
 
@@ -65,6 +65,7 @@ public class BrowserUtils {
     Assert.assertEquals(driver.getTitle(), expectedTitle);
 
 }
+
 
 
 
