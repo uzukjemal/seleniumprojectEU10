@@ -29,13 +29,14 @@ public class T1_WebTable_Order_Verify {
     public void order_name_verify_test(){
 
         // Locate the cell that has Bob Martin text in it.
-        WebElement bobMartinCell = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
-        System.out.println("bobMartinCell = " + bobMartinCell.getText());
+        WebElement bobMartinCell =
+                driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
+        //System.out.println("bobMartinCell = " + bobMartinCell.getText());
 
 
         //2. Verify Bob’s name is listed as expected.
         //Expected: “Bob Martin”
-        String expectedBobName = "Bob Martin ";
+        String expectedBobName = "Bob Martin";
         String actualBobName = bobMartinCell.getText();
 
         Assert.assertEquals(actualBobName, expectedBobName);
@@ -47,6 +48,10 @@ public class T1_WebTable_Order_Verify {
                 driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]"));
 
 
+        String expectedBobDate = "12/31/2021";
+        String actualBobDate = bobMartinDateCell.getText();
+
+        Assert.assertEquals(actualBobDate, expectedBobDate);
 
     }
 
