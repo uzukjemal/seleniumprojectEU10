@@ -13,6 +13,8 @@ public class JavaFakerPractice {
 
         //Creating Faker object to reach methods
         Faker faker = new Faker();
+        //Faker faker = new Faker(new Locale("fr"));
+
 
 
         System.out.println("faker.name().firstName() = " + faker.name().firstName());
