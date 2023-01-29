@@ -37,10 +37,20 @@ public class ActionPractices {
 
         //actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP).perform();
 
+        Driver.closeDriver();
 
+
+
+        }
+
+    @Test
+    public void test2(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
+        Driver.closeDriver();
+    }
 
 
     }
 
 
-}
+
