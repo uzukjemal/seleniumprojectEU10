@@ -21,13 +21,22 @@ public class T1_Circle_Drag_N_Drop {
         acceptCookie.click();
 
         //Locate small and big circles be able to drag them around
-        WebElement smallCircle = Driver.getDriver().findElement(By.id("droptarget"));
-        WebElement bigCircle = Driver.getDriver().findElement(By.id("draggable"));
+        WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
+        WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
         //2. Drag and drop the small circle to bigger circle.
         Actions actions = new Actions(Driver.getDriver());
         BrowserUtils.sleep(3);
-        actions.dragAndDrop(smallCircle,bigCircle).perform();
+        //actions.dragAndDrop(smallCircle,bigCircle).perform();
+
+        actions.clickAndHold(smallCircle)
+                .pause(2000)
+                .moveToElement(bigCircle)
+                .pause(2000)
+                .release()
+                .perform();
+
+
 
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
@@ -40,10 +49,5 @@ public class T1_Circle_Drag_N_Drop {
     }
 
 
-    //TC #: Drag and drop
-    //1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
-    //2. Drag and drop the small circle to bigger circle.
-    //3. Assert:
-    //-Text in big circle changed to: “You did great!”
 
 }
