@@ -58,4 +58,4 @@ public class InterviewQuestion {
 
 
 //5. Log the following values for each size
-//.Size information .Price .Color .Stock status
+
