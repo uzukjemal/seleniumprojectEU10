@@ -48,7 +48,8 @@ public class InterviewQuestion {
         System.out.println("Stock:"+ itemStockStatus.getText());
 
 
-       Driver.closeDriver();
+
+        Driver.closeDriver();
     }
 
 
