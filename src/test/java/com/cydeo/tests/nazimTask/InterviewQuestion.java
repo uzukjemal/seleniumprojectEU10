@@ -25,7 +25,7 @@ public class InterviewQuestion {
         searchBox.sendKeys("iPhone13 512"+ Keys.ENTER);
 
 
-        //3. Check that the results are listed
+        //3. Check that the results are listed, checking for expected/actual results
         String expectedResult = "Amazon.com.tr : iPhone13 512";
         String actualResult = Driver.getDriver().getTitle();
 
@@ -46,6 +46,9 @@ public class InterviewQuestion {
         System.out.println("iPhone 13  Size:"+itemSize.getText());
         System.out.println("Color:"+ itemColor.getText()+ " " + " Price:"+itemPrice.getText());
         System.out.println("Stock:"+ itemStockStatus.getText());
+
+
+        Driver.closeDriver();
     }
 
 
@@ -53,7 +56,7 @@ public class InterviewQuestion {
 
 
 //We expect you to automate the following steps via Selenium Web Driver, regardless of
-//checking for expected/actual results. We prefer Chrome as the browser, but the choice
+//. We prefer Chrome as the browser, but the choice
 //is yours.
 
 
