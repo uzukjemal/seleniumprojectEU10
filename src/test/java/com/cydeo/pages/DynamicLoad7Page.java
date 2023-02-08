@@ -18,5 +18,10 @@ public class DynamicLoad7Page {
     @FindBy(xpath = "//strong[.='Done!']")
     public WebElement doneMessage;
 
+    @FindBy(xpath = "//img[@src='/img/a-few-moments.jpg']")
+    public WebElement spongeBobImage;
+
+
+
 
 }
