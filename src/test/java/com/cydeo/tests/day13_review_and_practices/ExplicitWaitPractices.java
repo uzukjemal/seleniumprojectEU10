@@ -1,6 +1,7 @@
 package com.cydeo.tests.day13_review_and_practices;
 
 import com.cydeo.pages.DynamicControlsPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
@@ -31,6 +32,7 @@ public class ExplicitWaitPractices {
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
 
          */
+        BrowserUtils.waitForInvisibilityOf(dynamicControlsPage.loadingBar);
 
 
 
